@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "LiveTrans — Phiên dịch trực tiếp",
+  "description": "Nghe audio của tab, dịch sang tiếng Việt và đọc bản dịch gần như tức thời.",
+  "version": "0.1.5",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "tabCapture",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": { "service_worker": "service_worker.js" },
+  "action": {
+    "default_title": "LiveTrans",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

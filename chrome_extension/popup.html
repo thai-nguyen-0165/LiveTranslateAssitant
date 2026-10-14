@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Translate Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <main>
+    <h1>Live Translate Assistant</h1>
+    <p class="sub">Trợ lý phiên dịch</p>
+    <label>Giọng đọc
+      <select id="voice">
+        <option>Đang tải…</option>
+      </select>
+    </label>
+    <label class="range-label">Âm lượng tab <output id="original-volume-value">100%</output>
+      <input id="original-volume" type="range" min="0" max="200" step="5" value="100">
+    </label>
+    <label class="range-label">Âm lượng TTS <output id="volume-value">100%</output>
+      <input id="volume" type="range" min="0" max="200" step="5" value="100">
+    </label>
+    <label class="range-label">Tốc độ đọc TTS <output id="speed-value">1.00x</output>
+      <input id="speed" type="range" min="0.5" max="2" step="0.05" value="1">
+    </label>
+    <label>API endpoint
+      <input id="backend" value="http://127.0.0.1:8000">
+    </label>
+    <div class="buttons"><button id="start">Bắt đầu</button><button id="stop" class="secondary">Dừng</button></div>
+    <button id="show-transcript" class="secondary transcript-button">Mở transcript</button>
+    <div id="status" class="status">Sẵn sàng</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+
+</html>
